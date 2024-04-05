@@ -31,7 +31,7 @@ func main() {
 	})
 
 	c.Visit("http://go-colly.org/")
-	pretty.Print(allitems)
+	pretty.Println(allitems)
 
 	// Marshal the struct array into JSON bytes
 	jsonData, err := json.Marshal(allitems)
@@ -41,7 +41,7 @@ func main() {
 	}
 
 	// Write JSON data to a file
-	err = os.WriteFile("products.json", jsonData, 0644)
+	err = os.WriteFile("products.json", jsonData, 0000)
 	if err != nil {
 		fmt.Println("Error writing JSON to file:", err)
 		return
