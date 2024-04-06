@@ -1,0 +1,17 @@
+[
+    {
+        "header": "Batteries included",
+        "desc": "Colly comes with all the tools you need for scraping.",
+        "href": "https://go-colly.org/docs/"
+    },
+    {
+        "header": "Business ready",
+        "desc": "Free for commercial use.",
+        "href": "https://github.com/gocolly/colly/blob/master/LICENSE.txt"
+    },
+    {
+        "header": "Open Source",
+        "desc": "Development of Colly is community driven and public.",
+        "href": "https://github.com/gocolly/colly"
+    }
+]
