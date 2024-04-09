@@ -1,1 +1,1 @@
-Web Crawler using Go
+Web Crawler using GoLang
