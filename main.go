@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"os"
 
+	"web-crawler/backend"
+
 	"github.com/gocolly/colly"
 	"github.com/kr/pretty"
 )
@@ -48,5 +50,7 @@ func main() {
 	}
 
 	fmt.Println("JSON data written to products.json successfully")
+
+	backend.ExecuteAPI()
 
 }
