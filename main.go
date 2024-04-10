@@ -11,20 +11,14 @@ import (
 	"github.com/kr/pretty"
 )
 
-type details struct {
-	Header string `json:"header"`
-	Desc   string `json:"desc"`
-	Href   string `json:"href"`
-}
-
 func main() {
 
-	allitems := []details{}
+	allitems := []backend.Details{}
 	c := colly.NewCollector()
 
 	// Find and visit all links
 	c.OnHTML("div.three div.row div.column", func(e *colly.HTMLElement) {
-		items := details{
+		items := backend.Details{
 			Header: e.ChildText("h2.ui"),
 			Desc:   e.ChildText("p"),
 			Href:   e.ChildAttr("a", "href"),
@@ -51,6 +45,6 @@ func main() {
 
 	fmt.Println("JSON data written to products.json successfully")
 
-	backend.ExecuteAPI()
+	backend.ExecuteAPI(allitems)
 
 }

@@ -4,7 +4,13 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func ExecuteAPI() {
+type Details struct {
+	Header string `json:"header"`
+	Desc   string `json:"desc"`
+	Href   string `json:"href"`
+}
+
+func ExecuteAPI(allitems []Details) {
 	app := fiber.New()
 
 	// Enable CORS for all routes
@@ -27,9 +33,9 @@ func ExecuteAPI() {
 		return c.Next()
 	})
 
-	// app.Get("/api/message", func(c *fiber.Ctx) error {
-	// 	return c.JSON(allitems)
-	// })
+	app.Get("/api/message", func(c *fiber.Ctx) error {
+		return c.JSON(allitems)
+	})
 
 	app.Listen(":8080")
 }
