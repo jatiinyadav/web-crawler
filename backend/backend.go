@@ -1,6 +1,8 @@
 package backend
 
 import (
+	"fmt"
+
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -34,6 +36,12 @@ func ExecuteAPI(allitems []Details) {
 	})
 
 	app.Get("/api/message", func(c *fiber.Ctx) error {
+		return c.JSON(allitems)
+	})
+
+	app.Get("/api/weburl", func(c *fiber.Ctx) error {
+		inputValue := c.Query("input")
+		fmt.Println(inputValue)
 		return c.JSON(allitems)
 	})
 
