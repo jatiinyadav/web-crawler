@@ -1,0 +1,26 @@
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  open_pr_comment:
+    runs-on: ubuntu-latest
+    name: Comment on opened pull request
+    permissions: 
+      pull-requests: write 
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            Hey @${{github.event.pull_request.user.login}}!
+            
+            Thank you for opening a pull request and contributing to this project! :heart:
+
+            A maitainer will be reviewing it as soon as possible.
+            
+          reactions: heart, rocket
