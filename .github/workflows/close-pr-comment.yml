@@ -3,9 +3,9 @@ on:
     types: [closed]
 
 jobs:
-  open_pr_comment:
+  closed_pr_comment:
     runs-on: ubuntu-latest
-    name: Comment on opened pull request
+    name: Comment on closed pull request
     permissions: 
       pull-requests: write 
     
