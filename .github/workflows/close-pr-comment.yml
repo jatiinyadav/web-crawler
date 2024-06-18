@@ -1,0 +1,24 @@
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  closed_pr_comment:
+    runs-on: ubuntu-latest
+    name: Comment on closed pull request
+    permissions: 
+      pull-requests: write 
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            Your pull request has been closed @${{github.event.pull_request.user.login}}!
+            
+            Thank you for your contribution to this project! :heart:
+            
+          reactions: heart, rocket
