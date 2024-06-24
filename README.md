@@ -49,7 +49,7 @@ npm run dev
 You can view the project in working [here](https://www.loom.com/share/0c3373a461f2424c831bad9ddcac5bfd).
 
 ## Contact
-For any queries, please feel free to reach out to me at [mail](mailto:jatin27yadav@gmail.com) or Twitter - [@jatiin_yadav](https://twitter.com/jatiin_yadav).
+For any queries, please feel free to reach out to me at [mail](mailto:jatin27yadav@gmail.com) or Twitter - [@jatiin_yadav](https://x.com/jatiin_yadav).
 
 
  
